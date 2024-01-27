@@ -32,13 +32,30 @@ export default function PageContent() {
           ))}
         </select>
       </div>
-      <ul className="border-t pt-5 flex flex-wrap">
+      <ul className="border-t pt-5 flex flex-wrap justify-between">
         {ItemObjectsList.map((item: ItemObject, index: number) => (
-          <div key={index} className='w-[33%]'>
-            <Image alt='random' src='svgs/random.svg' width={50}/>
-            <h4>{item.name}</h4></div>
+          <div
+            key={index}
+            className="w-[10vw] min-w-[150px] max-w-[250px] 
+                    flex flex-col my-2 items-center text-center"
+          >
+            <Image
+              className="w-1/2 m-auto"
+              alt="random"
+              src="svgs/random.svg"
+            />
+            <h5 className="uppercase text-gray-500">{item.name}</h5>
+            <div className="flex justify-evenly w-full">
+              <p className="my-auto">${item.price.toFixed(2)}</p>
+              <Image
+                className="cursor-pointer"
+                src="svgs/cart-add.svg"
+                width={25}
+                alt="add-to-cary"
+              />
+            </div>
+          </div>
         ))}
-        <li>item</li>
       </ul>
     </div>
   );
