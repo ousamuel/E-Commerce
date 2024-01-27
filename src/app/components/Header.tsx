@@ -15,23 +15,23 @@ export default function Header() {
   return (
     <div
       className="max-h-[330px] min-h-[150px] border
-          h-[30vw] flex flex-col items-center justify-center justify-around"
+          h-[30vw] flex flex-col items-center justify-center header pb-5 pt-10"
     >
       <div className="max-w-content text-6xl flex-col flex align-middle items-center">
-        Logo <Image src="svgs/logo.svg" width="50px" alt="logo" />
+        Logo
+        {/* <Image src="svgs/logo.svg" width="50px" alt="logo" /> */}
       </div>
       <ul
         id="header-links"
         className="flex-2 w-full flex justify-around items-right"
       >
-        {HeaderLinksList.map((link: HeaderLink) =>
+        {HeaderLinksList.map((link: HeaderLink, index) =>
           link.sublinks.length > 0 ? (
-            // Render Tooltip if the title matches a certain condition
             <Tooltip
               content={
-                <ul>
+                <ul key={index}>
                   {link.sublinks.map((sublink: string) => (
-                    <li>{sublink}</li>
+                    <li key={sublink}>{sublink}</li>
                   ))}
                 </ul>
               }
