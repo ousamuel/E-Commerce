@@ -23,7 +23,7 @@ export default function PageContent() {
   return (
     <div className="page-content">
       <div className="flex justify-between pb-3 text-gray-500">
-        <p className="mt-auto">results</p>
+        <p className="mt-auto">Showing __ of __ results</p>
         <select name="sort" className="rounded-md cursor-pointer border p-2">
           {SortOptions.map((option: String | any) => (
             <option key={option} value={option} className="">
