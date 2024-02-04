@@ -21,7 +21,7 @@ export default function PageContent() {
     "In Stock",
   ];
   return (
-    <div className="page-content">
+    <div className="page-content border-t">
       <div className="flex justify-between pb-3 text-gray-500">
         <p className="mt-auto">Showing __ of __ results</p>
         <select name="sort" className="rounded-md cursor-pointer border p-2">
@@ -32,12 +32,11 @@ export default function PageContent() {
           ))}
         </select>
       </div>
-      <ul className="border-t pt-5 flex flex-wrap justify-between">
+      <ul className="border-t pt-2 flex flex-wrap justify-between">
         {ItemObjectsList.map((item: ItemObject, index: number) => (
           <div
             key={index}
-            className="w-[10vw] min-w-[150px] max-w-[250px] 
-                    flex flex-col my-2 items-center text-center"
+            className="product-div my-2"
           >
             <Image
               className="w-1/2 m-auto"

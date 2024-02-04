@@ -53,8 +53,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+span{
+  font-size: 16px;
+}
 body {
   /* overflow-y: scroll; */
+  background-color: #FCF2E9;
+
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -122,7 +127,7 @@ body {
 }
 
 .subheader {
-  height: 140px;
+  height: 120px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -130,7 +135,6 @@ body {
   text-transform: uppercase;
   justify-content: center;
   color: rgb(70, 70, 70);
-  background-color: rgb(245, 245, 245);
 }
 .header-link {
   font-size: 16px;
@@ -140,9 +144,6 @@ body {
   display: flex;
   flex-grow: 1;
   height: 100%;
-  margin-left: 5%;
-  margin-right: 5%;
-  padding-bottom: 100px;
   overflow-y: scroll;
   /* border: solid; */
 }
@@ -151,15 +152,21 @@ body {
   padding-top: 30px;
 }
 .sidebar {
-  width: 28%;
+  width: 25%;
+  padding-left: 3%;
   padding-right: 10px;
   max-width: 340px;
 }
 .page-content {
   display: flex;
-  padding-left: 30px;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 100px;
+
   flex-direction: column;
   flex-grow: 1;
+  background-color: #FFF9F9;
+
 }
 .header {
   justify-content: space-between;
@@ -182,8 +189,19 @@ body {
   min-height: 100vh;
   overflow-y: scroll;
 }
-span{
-  font-size: 16px;
+.product-div{
+  min-width: 150px;
+  max-width: 250px;
+  width: 10vw;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0px 10px 0px;
+  /* border:solid; */
+  border-radius: 2px;
+  margin: 2vh 7px 2vh 7px;
+  box-shadow: 0px 6px 5px rgb(186, 186, 186);
 }
 @media (max-width: 850px) {
   .header {
@@ -201,6 +219,6 @@ span{
     display: flex;
   }
   .page-content {
-    padding-left: 0px;
+    /* padding-left: 0px; */
   }
 }

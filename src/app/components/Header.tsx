@@ -4,8 +4,8 @@ import { SidebarLinks, Sublink, SidebarLink } from "../staticData";
 export default function Header() {
   return (
     <div
-      className="max-h-[330px] min-h-[150px] border
-          h-[30vw] flex flex-col items-center justify-center header"
+      className="max-h-[330px] min-h-[150px]
+          h-[30vw] flex flex-col items-center justify-center header bg-[#2E4832]"
     >
       <div className="max-w-content text-6xl flex-col flex align-middle items-center grow justify-center">
         {/* Logo */}
@@ -17,7 +17,7 @@ export default function Header() {
       </div>
       <ul
         id="header-all-links"
-        className="flex-2 w-full flex justify-around items-right"
+        className="flex-2 w-full flex justify-around items-right text-white"
       >
         {SidebarLinks.map((link: SidebarLink, index) =>
           link.sublinks.length > 0 ? (

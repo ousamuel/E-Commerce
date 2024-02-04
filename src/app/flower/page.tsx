@@ -9,9 +9,9 @@ export default function FlowerPage() {
       <Header />
       <div className="subheader">
         <h2 className="font-bold">Flower</h2>
-        <h5 className="">
+        {/* <h5 className="">
           <Link href="/">Home</Link>
-        </h5>
+        </h5> */}
       </div>
       <div className="main-body">
         <Sidebar />
