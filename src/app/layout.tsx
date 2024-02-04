@@ -33,7 +33,7 @@ export default function RootLayout({
     }
   };
   useEffect(() => {
-    const body = document.querySelector(".main-body");
+    const body = document.querySelector('.main-body') as HTMLElement | null;
     if (body && body.style) {
       if (navOpen == "open") {
         body.style.overflow = "hidden";
