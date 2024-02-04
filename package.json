@@ -9,20 +9,39 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@aws-amplify/ui-react": "^6.1.2",
     "@nextui-org/react": "^2.2.9",
+    "@types/express": "^4.17.21",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
     "framer-motion": "^11.0.3",
     "next": "14.1.0",
     "node": "^21.6.1",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "ts-node": "^10.9.2"
   },
   "devDependencies": {
-    "@types/node": "^20",
+    "@types/node": "^20.11.16",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
+    "concurrently": "^8.2.2",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
-    "typescript": "^5"
-  }
+    "typescript": "^5.3.3"
+  },
+  "description": "root: npm i @nextui-org/react framer-motion",
+  "main": "postcss.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ousamuel/E-Commerce.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ousamuel/E-Commerce/issues"
+  },
+  "homepage": "https://github.com/ousamuel/E-Commerce#readme"
 }

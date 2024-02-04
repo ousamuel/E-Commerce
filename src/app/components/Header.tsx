@@ -1,54 +1,30 @@
 import React from "react";
 import { Image, Tooltip, Link } from "@nextui-org/react";
-
+import { SidebarLinks, Sublink, SidebarLink } from "../staticData";
 export default function Header() {
-  type Sublink = {
-    title: string;
-    route: string;
-  };
-  type HeaderLink = {
-    title: string;
-    sublinks: Sublink[];
-    route: string;
-  };
-  const HeaderLinksList: HeaderLink[] = [
-    { title: "Home", sublinks: [], route: "/" },
-    { title: "Flower", sublinks: [], route: "/flower" },
-    {
-      title: "Thing1",
-      sublinks: [
-        { title: "sub1", route: "/" },
-        { title: "sub2", route: "/" },
-      ],
-      route: "/",
-    },
-    {
-      title: "Thing2",
-      sublinks: [
-        { title: "sub3", route: "/" },
-        { title: "sub4", route: "/" },
-      ],
-      route: "/",
-    },
-  ];
   return (
     <div
       className="max-h-[330px] min-h-[150px] border
-          h-[30vw] flex flex-col items-center justify-center header pb-1 pt-10"
+          h-[30vw] flex flex-col items-center justify-center header"
     >
-      <div className="max-w-content text-6xl flex-col flex align-middle items-center">
-        Logo
-        {/* <Image src="svgs/logo.svg" width="50px" alt="logo" /> */}
+      <div className="max-w-content text-6xl flex-col flex align-middle items-center grow justify-center">
+        {/* Logo */}
+        <Image
+          src="imgs/logo.png"
+          className="w-[35vw] min-w-[240px] max-w-[500px] "
+          alt="logo"
+        />
       </div>
       <ul
         id="header-all-links"
         className="flex-2 w-full flex justify-around items-right"
       >
-        {HeaderLinksList.map((link: HeaderLink, index) =>
+        {SidebarLinks.map((link: SidebarLink, index) =>
           link.sublinks.length > 0 ? (
             <Tooltip
+              key={index}
               content={
-                <ul className='flex flex-col border p-3 bg-black text-white static' key={index}>
+                <ul className="flex flex-col border p-3 bg-black text-white static">
                   {link.sublinks.map((sublink: Sublink) => (
                     <Link href={sublink.route} key={sublink.title}>
                       {sublink.title}
@@ -63,7 +39,7 @@ export default function Header() {
               </Link>
             </Tooltip>
           ) : (
-            <Link href={link.route} className="header-link">
+            <Link key={index} href={link.route} className="header-link">
               {link.title}
             </Link>
           )

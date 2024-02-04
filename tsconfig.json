@@ -12,6 +12,9 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "target": "es6",
+    "outDir": "./dist",
+    "rootDir": "./src",
     "plugins": [
       {
         "name": "next"
@@ -21,6 +24,7 @@
       "@/*": ["./src/*"]
     }
   },
+  
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }

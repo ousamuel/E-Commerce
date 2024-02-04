@@ -7,7 +7,10 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
-a:focus, button:focus , li:focus, select:focus{
+a:focus,
+button:focus,
+li:focus,
+select:focus {
   outline: none;
 }
 a:hover {
@@ -69,6 +72,54 @@ body {
     )
     rgb(var(--background-start-rgb));
 } */
+#slider {
+  /* position: absolute; */
+  /* width: 100px;
+  height: 100px;
+  background: blue; */
+  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+}
+
+.slide-in {
+  animation: slide-in 0.5s forwards;
+  -webkit-animation: slide-in 0.5s forwards;
+}
+
+.slide-out {
+  animation: slide-out 0.75s forwards;
+  -webkit-animation: slide-out 0.75s forwards;
+}
+
+@keyframes slide-in {
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes slide-in {
+  100% {
+    -webkit-transform: translateX(0%);
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@-webkit-keyframes slide-out {
+  0% {
+    -webkit-transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+  }
+}
 
 .subheader {
   height: 140px;
@@ -81,7 +132,7 @@ body {
   color: rgb(70, 70, 70);
   background-color: rgb(245, 245, 245);
 }
-.header-link{
+.header-link {
   font-size: 16px;
   padding: 5px;
 }
@@ -92,10 +143,11 @@ body {
   margin-left: 5%;
   margin-right: 5%;
   padding-bottom: 100px;
+  overflow-y: scroll;
   /* border: solid; */
-
 }
-.sidebar, .page-content{
+.sidebar,
+.page-content {
   padding-top: 30px;
 }
 .sidebar {
@@ -103,24 +155,52 @@ body {
   padding-right: 10px;
   max-width: 340px;
 }
-.page-content{
-  display:flex;
+.page-content {
+  display: flex;
   padding-left: 30px;
   flex-direction: column;
   flex-grow: 1;
 }
-.header{
+.header {
   justify-content: space-between;
+  /* padding-top: 2%; */
+}
+.navbar-main {
+  width: 100%;
+  max-width: 500px;
+}
+
+.navbar-main,
+.navbar,
+.navbar-trigger {
+  display: none;
+}
+
+.navbar {
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  overflow-y: scroll;
+}
+span{
+  font-size: 16px;
 }
 @media (max-width: 850px) {
-  .header{
+  .header {
     justify-content: space-evenly;
+    padding-top: 0px;
   }
+
   #header-all-links,
   .sidebar {
     display: none;
   }
-  .page-content{
+  .navbar-main,
+  .navbar,
+  .navbar-trigger {
+    display: flex;
+  }
+  .page-content {
     padding-left: 0px;
   }
 }

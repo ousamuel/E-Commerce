@@ -1,0 +1,12 @@
+{
+  "resourceName": "s3snacktimenycstorage",
+  "bucketName": "snacktimenyc-storage",
+  "policyUUID": "66166b6e",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "READ"
+  ]
+}

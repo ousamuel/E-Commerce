@@ -1,0 +1,58 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-ecommercesam-staging-234938-authRole",
+      "UnauthRoleArn": "arn:aws:iam::767397798912:role/amplify-ecommercesam-staging-234938-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::767397798912:role/amplify-ecommercesam-staging-234938-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-ecommercesam-staging-234938-deployment",
+      "UnauthRoleName": "amplify-ecommercesam-staging-234938-unauthRole",
+      "StackName": "amplify-ecommercesam-staging-234938",
+      "StackId": "arn:aws:cloudformation:us-east-2:767397798912:stack/amplify-ecommercesam-staging-234938/3b4460a0-bfca-11ee-96a2-02ea7f8b032d",
+      "AmplifyAppId": "d3vwd6pokjh8yr"
+    },
+    "categories": {
+      "auth": {
+        "ecommercesam": {}
+      },
+      "storage": {
+        "s3snacktimenycstorage": {}
+      },
+      "api": {
+        "restAPI": {},
+        "users": {}
+      },
+      "function": {
+        "createUser": {
+          "deploymentBucketName": "amplify-ecommercesam-staging-234938-deployment",
+          "s3Key": "amplify-builds/createUser-77426966353171734c6f-build.zip"
+        },
+        "getUsers": {
+          "deploymentBucketName": "amplify-ecommercesam-staging-234938-deployment",
+          "s3Key": "amplify-builds/getUsers-4545316f3864484d4146-build.zip"
+        }
+      }
+    }
+  },
+  "restapi": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-ecommercesam-restapi-155345-authRole",
+      "UnauthRoleArn": "arn:aws:iam::767397798912:role/amplify-ecommercesam-restapi-155345-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::767397798912:role/amplify-ecommercesam-restapi-155345-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-ecommercesam-restapi-155345-deployment",
+      "UnauthRoleName": "amplify-ecommercesam-restapi-155345-unauthRole",
+      "StackName": "amplify-ecommercesam-restapi-155345",
+      "StackId": "arn:aws:cloudformation:us-east-2:767397798912:stack/amplify-ecommercesam-restapi-155345/2a34f0a0-c20d-11ee-b75d-0287993e023b",
+      "AmplifyAppId": "d3vwd6pokjh8yr"
+    },
+    "categories": {
+      "auth": {
+        "ecommercesam": {}
+      },
+      "storage": {
+        "s3snacktimenycstorage": {}
+      }
+    }
+  }
+}
