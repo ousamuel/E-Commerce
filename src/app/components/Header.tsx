@@ -10,7 +10,7 @@ export default function Header() {
       <div className="max-w-content text-6xl flex-col flex align-middle items-center grow justify-center">
         {/* Logo */}
         <Image
-          src="imgs/logo.png"
+          src="/imgs/logo.png"
           className="w-[35vw] min-w-[240px] max-w-[500px] "
           alt="logo"
         />

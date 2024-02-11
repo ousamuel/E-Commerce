@@ -1,18 +1,9 @@
 "use client";
 import { Image } from "@nextui-org/react";
+import { Router } from "express";
+import { useRouter } from "next/navigation";
+import { ItemObject, ItemObjectsList } from "../staticData";
 
-type ItemObject = {
-  name: string;
-  price: number;
-  availability: boolean;
-};
-
-const ItemObjectsList: ItemObject[] = [
-  { name: "flower", price: 500.5, availability: true },
-  { name: "flower2", price: 125.5, availability: false },
-  { name: "flower3", price: 12.5, availability: true },
-  { name: "flower4", price: 82.5, availability: false },
-];
 export default function PageContent() {
   const SortOptions: String[] = [
     "Sort by popularity",
@@ -20,6 +11,7 @@ export default function PageContent() {
     "Sort Z-A",
     "In Stock",
   ];
+  const router = useRouter();
   return (
     <div className="page-content border-t">
       <div className="flex justify-between pb-3 text-gray-500">
@@ -37,6 +29,9 @@ export default function PageContent() {
           <div
             key={index}
             className="product-div my-2"
+            onClick={() =>
+              router.push(`/product-details/${item.id + "-" + item.name}`)
+            }
           >
             <Image
               className="w-1/2 m-auto"
@@ -50,7 +45,7 @@ export default function PageContent() {
                 className="cursor-pointer"
                 src="svgs/cart-add.svg"
                 width={25}
-                alt="add-to-cary"
+                alt="add-to-cart"
               />
             </div>
           </div>
