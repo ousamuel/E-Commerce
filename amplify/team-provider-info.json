@@ -17,20 +17,6 @@
       },
       "storage": {
         "s3snacktimenycstorage": {}
-      },
-      "api": {
-        "restAPI": {},
-        "users": {}
-      },
-      "function": {
-        "createUser": {
-          "deploymentBucketName": "amplify-ecommercesam-staging-234938-deployment",
-          "s3Key": "amplify-builds/createUser-77426966353171734c6f-build.zip"
-        },
-        "getUsers": {
-          "deploymentBucketName": "amplify-ecommercesam-staging-234938-deployment",
-          "s3Key": "amplify-builds/getUsers-4545316f3864484d4146-build.zip"
-        }
       }
     }
   },
