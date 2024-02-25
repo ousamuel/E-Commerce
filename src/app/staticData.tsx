@@ -61,3 +61,109 @@ export const ItemObjectsList: ItemObject[] = [
     rating: 2.4,
   },
 ];
+
+export type CommentObject = {
+  name: string;
+  comment: string;
+  rating: number;
+  date: Date;
+};
+export const CommentList: CommentObject[] = [
+  {
+    name: "customer1",
+    comment: "i loved it it was amazing and i waouldnt tosd ntjsad more ",
+    rating: 5,
+    date: new Date(2022, 5, 12),
+  },
+  {
+    name: "customer2",
+    comment:
+      "swee aasd asdit asodesa reay asdasdasd asd asd asd asd sd sd a sdasda sdasda adsdasd asd as das lreammy pheantne asphenlyoatukar is a gentiic dorisdoer for the engner with enmyaiti activity asomething new with worlds and effectiveness does not really qustiont",
+    rating: 4,
+    date: new Date(2023, 12, 31),
+  },
+  {
+    name: "customer3",
+    comment:
+      "swee aasd asdit asod. but i dowuldy say that something time about words that have meaning. Something rot saysad wbausdm ipsuem lorem",
+    rating: 4,
+    date: new Date(2019, 2, 27),
+  },
+  {
+    name: "customer4",
+    comment:
+    "swee aasd asdit asodesa reay asdasdasd asd asd asd asd sd sd a sdasda sdasda adsdasd asd as das lreammy pheantne asphenlyoatukar is a gentiic dorisdoer for the engner with enmyaiti activity asomething new with worlds and effectiveness does not really qustiont",
+    rating: 4,
+    date: new Date(2019, 2, 27),
+  },
+  {
+    name: "customer5",
+    comment:
+      "swee aasd asdit asod. but i dowuldy say that something time about words that have meaning. Something rot saysad wbausdm ipsuem lorem",
+    rating: 4,
+    date: new Date(2019, 2, 27),
+  },
+  {
+    name: "customer6",
+    comment:
+    "swee aasd asdit asodesa reay asdasdasd asasda sdasda adsdasd asd as das lreammy pheantne asphenlyoatukar is a gentiic dorisdoer for the engner with enmyaiti activity asomething newot really qustiont",
+    rating: 4,
+    date: new Date(2019, 2, 27),
+  },
+  {
+    name: "customer7",
+    comment:
+      "swee aasd asdit asod. but i dowuldy say that something time about words that have meaning. Something rot saysad wbausdm ipsuem lorem",
+    rating: 4,
+    date: new Date(2019, 2, 27),
+  },
+  {
+    name: "customer8",
+    comment:
+    "swee aasd asdit asodesa reay asdasdasd asd asd asd asd sd sd a sdasda sdasda adsdasd asd as das lreammy pheantne asphenlyoatukar is a gentiic dorisdoer for the engner with enmyaiti activity asomething new with worlds and effectiveness does not really qustiont",
+    rating: 4,
+    date: new Date(2019, 2, 27),
+  },
+  {
+    name: "customer9",
+    comment:
+      "swee aasd asdit asod. but i dowuldy say that something time about words that have meaning. Something rot saysad wbausdm ipsuem lorem",
+    rating: 4,
+    date: new Date(2019, 2, 27),
+  },
+  {
+    name: "customer10",
+    comment:
+    "swee aasd asdit asodesa reay asdasdasd asd asd asd asd sd sd a sdasda sdasda adsdasd asd as das lreammy pheantne asphenlyoatukar is a gentiic dorisdoer for the engner with enmyaiti activity asomething new with worlds and effectiveness does not really qustiont",
+    rating: 4,
+    date: new Date(2019, 2, 27),
+  },
+  {
+    name: "customer11",
+    comment:
+      "swee aasd asdit asod. but i dowuldy say that something time about words that have meaning. Something rot saysad wbausdm ipsuem lorem",
+    rating: 4,
+    date: new Date(2019, 2, 27),
+  },
+  {
+    name: "customer12",
+    comment:
+      "swee aasd asdit asod. but i dowuldy say that something time about words that have meaning. Something rot saysad wbausdm ipsuem lorem",
+    rating: 4,
+    date: new Date(2019, 2, 27),
+  },
+  {
+    name: "customer13",
+    comment:
+    "swee aasd asdit asodesa reay asdasdasd asd asd asd asd sd sd a sdasda sdasda adsdasd asd as das lreammy pheantne asphenlyoatukar is a gentiic dorisdoer for the engner with enmyaiti activity asomething new with worlds and effectiveness does not really qustiont",
+    rating: 4,
+    date: new Date(2019, 2, 27),
+  },
+  {
+    name: "customer14",
+    comment:
+      "swee aasd asdit asod. but i dowuldy say that something time about words that have meaning. Something rot saysad wbausdm ipsuem lorem",
+    rating: 4,
+    date: new Date(2019, 2, 27),
+  },
+];

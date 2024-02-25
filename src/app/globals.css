@@ -52,6 +52,9 @@ h4 {
 h5 {
   font-size: 20px;
 }
+h6 {
+  font-size: 16px;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -144,8 +147,8 @@ body {
 }
 #avg-review {
   border-right-width: 1px;
-  padding-right: 30px;
-  margin-right: 30px;
+  padding-right: 20px;
+  margin-right: 20px;
 }
 .related-products-container {
   /* justify-content: center; */
@@ -238,6 +241,25 @@ body {
   border-radius: 2px;
   margin: 2vh 7px 2vh 7px;
   box-shadow: 0px 6px 5px rgb(186, 186, 186);
+}
+.comment-div {
+  min-width: 275px;
+  width: 25%;
+  flex-grow: 1;
+  max-height: 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px 10px 10px;
+  background-color: #f1e7df;
+  border-radius: 2px;
+  margin: 0 7px 2vh 7px;
+  overflow-y: hidden;
+  box-shadow: 0px 2px 5px rgb(186, 186, 186);
+}
+.next-comments-button:hover {
+  cursor: pointer;
+  background-color: rgb(203, 203, 203);
+  border-radius: 100%;
 }
 @media (max-width: 850px) {
   .header {
