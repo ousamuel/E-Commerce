@@ -15,7 +15,8 @@ select:focus {
 }
 a:hover {
   cursor: pointer;
-  color: rgb(255, 29, 29);
+  background-color: #02b33d1a;
+  color: #02b33e;
 }
 @media (prefers-color-scheme: light) {
   :root {

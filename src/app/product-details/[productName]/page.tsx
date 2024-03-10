@@ -8,9 +8,10 @@ import {
   ItemObjectsList,
   CommentObject,
   CommentList,
-} from "@/app/staticData";
+} from "../../staticData";
 import { useEffect, useState } from "react";
 import { Comme } from "next/font/google";
+
 export default function GroupPage({ params }: { params: any }) {
   let rating = 4;
   let price = 50;
@@ -34,6 +35,29 @@ export default function GroupPage({ params }: { params: any }) {
       setCommentStack((prevState) => prevState - 1);
     }
   };
+  async function postTodo() {
+    try {
+      const restOperation = post({
+        apiName: "testAPI",
+        path: "/test",
+        options: {
+          body: {
+            message: "Mow the lawn",
+          },
+        },
+      });
+
+      const { body } = await restOperation.response;
+      const response = await body.json();
+
+      console.log("POST call succeeded");
+      console.log(response);
+    } catch (e) {
+      console.log("POST call failed: ", e);
+      throw e; // Rethrow the error so it can be caught outside of this function
+    }
+  }
+
   return (
     <div className="container">
       <Header />
@@ -67,7 +91,7 @@ export default function GroupPage({ params }: { params: any }) {
               <section className="my-2">
                 <p>text? idk</p>
                 <p>text? idk</p>
-                <h5 className="text-rose-700 font-extrabold">
+                <h5 className="text-red-600 font-extrabold">
                   ${price.toFixed(2)}
                 </h5>
               </section>
@@ -77,6 +101,18 @@ export default function GroupPage({ params }: { params: any }) {
               >
                 Add to cart
               </Button>
+              {params.availability ? (
+                <div>nice</div>
+              ) : (
+                <div className="flex items-center">
+                  <h6 className="text-red-500 bg-red-200 rounded-md px-2 py-1">
+                    Out of Stock
+                  </h6>
+                  <p className="pl-1 text-gray-600 hover:underline hover:cursor-pointer">
+                    Alert me when this item is back in store
+                  </p>
+                </div>
+              )}
             </main>
             <aside className="grow text-wrap">
               randomtext descrip tionrandom textdesc riptionrandomtext
@@ -162,13 +198,13 @@ export default function GroupPage({ params }: { params: any }) {
         </div>
         <div
           id="customer-comments"
-          className="flex flex-wrap justify-between min-h-[380px]"
+          className="flex flex-wrap justify-between min-h-[200px] items-center"
         >
           {CommentList.slice(commentStack * 3, commentStack * 3 + 3).map(
             (comment: CommentObject) => {
               console.log(comment.date);
               return (
-                <div key={comment.name}className="comment-div">
+                <div key={comment.name} className="comment-div">
                   <strong className="flex">
                     {comment.name}{" "}
                     <img className="ml-2" src="/svgs/verified.svg" width={18} />
@@ -223,8 +259,7 @@ export default function GroupPage({ params }: { params: any }) {
                 className="product-div"
               >
                 <Image className="w-4/5 m-auto" src="/imgs/random1.png" />
-                <span>{item.name}</span>
-                <span> eye</span>
+                <span className="uppercase text-gray-500">{item.name}</span>
                 <p>${item.price.toFixed(2)}</p>
               </Link>
             );

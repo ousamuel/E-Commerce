@@ -17,6 +17,9 @@
       },
       "storage": {
         "s3snacktimenycstorage": {}
+      },
+      "function": {
+        "testFunction": {}
       }
     }
   },
@@ -38,6 +41,15 @@
       },
       "storage": {
         "s3snacktimenycstorage": {}
+      },
+      "function": {
+        "testFunction": {
+          "deploymentBucketName": "amplify-ecommercesam-restapi-155345-deployment",
+          "s3Key": "amplify-builds/testFunction-7330436c745977345871-build.zip"
+        }
+      },
+      "api": {
+        "testAPI": {}
       }
     }
   }

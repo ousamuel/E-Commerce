@@ -1,5 +1,5 @@
 "use client";
-import { Image } from "@nextui-org/react";
+import { Image, Link } from "@nextui-org/react";
 import { Router } from "express";
 import { useRouter } from "next/navigation";
 import { ItemObject, ItemObjectsList } from "../staticData";
@@ -26,12 +26,11 @@ export default function PageContent() {
       </div>
       <ul className="border-t pt-2 flex flex-wrap justify-between">
         {ItemObjectsList.map((item: ItemObject, index: number) => (
-          <div
+          <Link
             key={index}
             className="product-div my-2"
-            onClick={() =>
-              router.push(`/product-details/${item.id + "-" + item.name}`)
-            }
+            href={`/product-details/${item.id + "-" + item.name}`}
+            
           >
             <Image
               className="w-1/2 m-auto"
@@ -48,7 +47,7 @@ export default function PageContent() {
                 alt="add-to-cart"
               />
             </div>
-          </div>
+          </Link>
         ))}
       </ul>
     </div>

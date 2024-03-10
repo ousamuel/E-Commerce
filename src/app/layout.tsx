@@ -33,7 +33,7 @@ export default function RootLayout({
     }
   };
   useEffect(() => {
-    const body = document.querySelector('.main-body') as HTMLElement | null;
+    const body = document.querySelector(".main-body") as HTMLElement | null;
     if (body && body.style) {
       if (navOpen == "open") {
         body.style.overflow = "hidden";
@@ -46,6 +46,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+      {/* target="_blank"
+        rel="noopener noreferrer"
+        href="" */}
+        <img
+          src="/svgs/telegram.svg"
+          className="fixed right-[15px] bottom-[15px]"
+          width={45}
+        />
         <nav
           id="slider"
           className={
@@ -66,10 +74,7 @@ export default function RootLayout({
             <ul className="flex flex-col">
               {SidebarLinks.map((link: SidebarLink, index) =>
                 link.sublinks.length > 0 ? (
-                  <Accordion
-                    isCompact
-                    key={index}
-                  >
+                  <Accordion isCompact key={index}>
                     <AccordionItem
                       className="hover:bg-gray-300 py-[5px]"
                       aria-label={link.title}
