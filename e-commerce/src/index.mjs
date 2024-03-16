@@ -2,62 +2,36 @@
 import express from "express";
 import cors from "cors";
 import { post, get } from "aws-amplify/api";
-import { Amplify } from "aws-amplify";
-import amplifyconfig from "./amplifyconfiguration.json";
+import Amplify from "aws-amplify";
+import aws_exports from "./aws-exports"; // The path to the aws-exports file may vary
+Amplify.configure(aws_exports);
+import { Auth } from 'aws-amplify';
 
-Amplify.configure(amplifyconfig);
+async function signUp(username, password, email) {
+    try {
+        const { user } = await Auth.signUp({
+            username,
+            password,
+            attributes: {
+                email, // optional
+                // other custom attributes
+            }
+        });
+        console.log(user);
+        alert("Registration successful! Check your email for a verification link.");
+    } catch (error) {
+        console.error('Error signing up:', error);
+        alert("An error occurred during registration.");
+    }
+}
 
-const existingConfig = Amplify.getConfig(); // <=== the initialized config should now be returned to existingConfig
-
-Amplify.configure({
-  ...existingConfig, // <=== existingConfig instead of awsconfig
-  API: {
-    ...existingConfig.API,
-    REST: {
-      ...existingConfig.API?.REST,
-      testAPI: {
-        endpoint:
-          "https://rcouhutzuj.execute-api.us-east-2.amazonaws.com/restapi",
-        region: "us-east-2",
-      },
-    },
-  },
-});
+// Example usage
+const username = "user@example.com";
+const password = "YourP@ssw0rd!";
+const email = "user@example.com";
+signUp(username, password, email);
 
 const app = express();
 const port = 3001;
 
 app.use(cors());
-
-async function postTodo() {
-  try {
-    const restOperation = post({
-      apiName: "testAPI",
-      path: "/test",
-      options: {
-        body: {
-          message: "Mow the lawn",
-        },
-      },
-    });
-
-    const { body } = await restOperation.response;
-    const response = await body.json();
-
-    console.log("POST call succeeded");
-    console.log(response);
-  } catch (e) {
-    console.log("POST call failed: ", e);
-    throw e; // Rethrow the error so it can be caught outside of this function
-  }
-}
-
-postTodo()
-  .then(() => {
-    app.listen(port, () => {
-      console.log(`Server is running on port ${port}`);
-    });
-  })
-  .catch((error) => {
-    console.error("Error while posting todo:", error);
-  });

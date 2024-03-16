@@ -1,4 +1,5 @@
 "use client";
+import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import {
@@ -10,8 +11,10 @@ import {
 } from "@nextui-org/react";
 import { SidebarLinks, Sublink, SidebarLink } from "./staticData";
 import React, { useContext, useState, useEffect } from "react";
+import awsExports from "../../e-commerce/aws-exports";
+Amplify.configure(awsExports);
 
-import "./globals.css";
+import { Amplify} from "aws-amplify";
 
 const inter = Inter({ subsets: ["latin"] });
 // export const metadata: Metadata = {
@@ -46,7 +49,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-      {/* target="_blank"
+        {/* target="_blank"
         rel="noopener noreferrer"
         href="" */}
         <img

@@ -9,6 +9,7 @@ export type SidebarLink = {
 };
 export const SidebarLinks: SidebarLink[] = [
   { title: "Home", sublinks: [], route: "/" },
+  { title: "login", sublinks: [], route: "/login" },
   { title: "Flower", sublinks: [], route: "/flower" },
   {
     title: "Thing1",
