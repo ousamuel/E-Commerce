@@ -35,28 +35,6 @@ export default function GroupPage({ params }: { params: any }) {
       setCommentStack((prevState) => prevState - 1);
     }
   };
-  async function postTodo() {
-    try {
-      const restOperation = post({
-        apiName: "testAPI",
-        path: "/test",
-        options: {
-          body: {
-            message: "Mow the lawn",
-          },
-        },
-      });
-
-      const { body } = await restOperation.response;
-      const response = await body.json();
-
-      console.log("POST call succeeded");
-      console.log(response);
-    } catch (e) {
-      console.log("POST call failed: ", e);
-      throw e; // Rethrow the error so it can be caught outside of this function
-    }
-  }
 
   return (
     <div className="container">
