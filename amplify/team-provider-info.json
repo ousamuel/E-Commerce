@@ -1,14 +1,14 @@
 {
   "staging": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-ecommercesam-staging-234938-authRole",
-      "UnauthRoleArn": "arn:aws:iam::767397798912:role/amplify-ecommercesam-staging-234938-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::767397798912:role/amplify-ecommercesam-staging-234938-authRole",
+      "AuthRoleName": "amplify-amplify63314092b8054-staging-211803-authRole",
+      "UnauthRoleArn": "arn:aws:iam::767397798912:role/amplify-amplify63314092b8054-staging-211803-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::767397798912:role/amplify-amplify63314092b8054-staging-211803-authRole",
       "Region": "us-east-2",
-      "DeploymentBucketName": "amplify-ecommercesam-staging-234938-deployment",
-      "UnauthRoleName": "amplify-ecommercesam-staging-234938-unauthRole",
-      "StackName": "amplify-ecommercesam-staging-234938",
-      "StackId": "arn:aws:cloudformation:us-east-2:767397798912:stack/amplify-ecommercesam-staging-234938/3b4460a0-bfca-11ee-96a2-02ea7f8b032d",
+      "DeploymentBucketName": "amplify-amplify63314092b8054-staging-211803-deployment",
+      "UnauthRoleName": "amplify-amplify63314092b8054-staging-211803-unauthRole",
+      "StackName": "amplify-amplify63314092b8054-staging-211803",
+      "StackId": "arn:aws:cloudformation:us-east-2:767397798912:stack/amplify-amplify63314092b8054-staging-211803/acb7b3c0-e3da-11ee-92f8-0280081fdced",
       "AmplifyAppId": "d3vwd6pokjh8yr"
     },
     "categories": {
@@ -19,7 +19,10 @@
         "s3snacktimenycstorage": {}
       },
       "function": {
-        "testFunction": {}
+        "testFunction": {
+          "deploymentBucketName": "amplify-amplify63314092b8054-staging-211803-deployment",
+          "s3Key": "amplify-builds/testFunction-7330436c745977345871-build.zip"
+        }
       }
     }
   },
@@ -47,9 +50,6 @@
           "deploymentBucketName": "amplify-ecommercesam-restapi-155345-deployment",
           "s3Key": "amplify-builds/testFunction-7330436c745977345871-build.zip"
         }
-      },
-      "api": {
-        "testAPI": {}
       }
     }
   }
